@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-size: cover;
+}
+
+a {
+    color: black;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    margin-left: 25px;
+}
+ol{
+    margin-left: 25px;
+}
+
+li {
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    background-color: #696a6d;
+    background-color: #a5a5a5bf;
+}
+
+.menu {
+    width: 670px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box2,
+.box3,
+.box4,
+.box5 {
+    color: black;
+    display: flex;
+}
+
+#wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 22px 15px 0 15px;
+}
+
+#box,
+#bg_color {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    border-collapse: collapse;
+    margin-bottom: 2%;
+}
+
+#img {
+    width: 140px;
+    height: 80px;
+    border-radius: 4px;
+    border-collapse: collapse;
+    margin-bottom: 2%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.linethrough {
+    text-decoration: line-through;
+}
+
+.menu2 {
+    display: none;
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#textarea {
+    display: none;
+    border: none;
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+
+#some_text {
+    padding: 25px;
+}
+
+
+.modal-body {
+
+    padding: 0 0 1rem 0;
+}
+
+#save,
+#bold,
+.left {
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+    width: 50px;
+}
+
+#ul,
+#textDecoration2,
+.right {
+    border-bottom-left-radius: 0%;
+    border-top-left-radius: 0%;
+    width: 50px;
+}
+
+#fontStyle,
+#textDecoration,
+.center,
+#fontSize,
+#color {
+    border-radius: 0%;
+    width: 50px;
+}
+
+option {
+    background-color: white;
+    color: black;
+    margin-right: 10px;
+}
+
+#reset {
+    width: 50%;
+    background-color: red;
+    border: 1px solid red;
+}
+
+#createTable {
+    width: 50%;
+    background-color: green;
+    border: 1pz solid green;
+    margin-left: 6px;
+}
+
+.form-row {
+    margin: 0;
+    padding: 10px;
+}
+
+label {
+    padding-left: 2px;
+}
+
+.modal-footer {
+    justify-content: space-around;
+    border-top: none;
+    flex-wrap: nowrap;
+}
+
+#reset1,
+#reset2 {
+    background-color: red;
+    border: 1px solid red;
+    width: 50%;
+}
+
+#createList,
+#createList2 {
+    background-color: green;
+    border: 1px solid green;
+    width: 50%;
+}
+
+form {
+    margin: 10px;
+}
+
+.btn-secondary {
+    color: black;
+}
+.invalid-feedback{
+    padding-top: 5px;
+}

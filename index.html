@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/css/font-awesome.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>final js.core</title>
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+            <div class="box1">
+                <button id="edit" class="btn btn-secondary" disabled><i class="fa fa-code"
+                        aria-hidden="true"></i></button>
+            </div>
+            <div class="box2">
+                <button id="bold" class="btn btn-secondary"><i class="fa fa-bold" aria-hidden="true"></i></button>
+                <button id="fontStyle" class="btn btn-secondary"><i class="fa fa-italic"
+                        aria-hidden="true"></i></button>
+                <button id="textDecoration" class="btn btn-secondary"><i class="fa fa-underline"
+                        aria-hidden="true"></i></button>
+                <button id="textDecoration2" class="btn btn-secondary"><i class="fa fa-strikethrough"
+                        aria-hidden="true"></i></button>
+            </div>
+            <div class="box3">
+                <button id="textAlign" value="left" class="btn btn-secondary left"><i class="fa fa-align-left"
+                        aria-hidden="true"></i></button>
+                <button id="textAlign" value="center" class="btn btn-secondary center"><i class="fa fa-align-center"
+                        aria-hidden="true"></i></button>
+                <button id="textAlign" value="right" class="btn btn-secondary right"><i class="fa fa-align-right"
+                        aria-hidden="true"></i></button>
+            </div>
+            <div class="box4" style="position: relative;">
+                <i class="fa fa-font" aria-hidden="true"
+                    style="position: absolute; z-index: 2; top: 11px; left: 15px;"></i>
+                <select name="fontFamily" id="fontFam" class="btn btn-secondary bg"
+                    style="width: 50px; position: relative; z-index: 1;border-top-right-radius: 0%;border-bottom-right-radius: 0%; padding-left: 17px;">
+                    <option value="Arial">Arial</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Verdana">Verdana</option>
+                </select>
+                <i class="fa fa-text-height" aria-hidden="true"
+                    style="position: absolute; z-index: 2; top: 11px; left: 60px; "></i>
+                <select name="size" id="fontSize" class="btn btn-secondary" style="width: 50px; padding-left: 17px;">
+                    <option value="12px">12px</option>
+                    <option value="14px">14px</option>
+                    <option value="16px">16px</option>
+                    <option value="18px">18px</option>
+                    <option value="20px">20px</option>
+                    <option value="22px">22px</option>
+                    <option value="25px">25px</option>
+                    <option value="30px">30px </option>
+                </select>
+                <button type="button" id="color" class="btn btn-secondary" data-toggle="modal"
+                    data-target="#exampleModalLong" style="width: 50px;">
+                    <i class="fa fa-paint-brush" aria-hidden="true"></i>
+                </button>
+                <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Choose text color</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="wrapper">
+                                    <div id="box" style="background-color: #009688"></div>
+                                    <div id="box" style="background-color: #607d8b;"></div>
+                                    <div id="box" style="background-color: #4caf50;"></div>
+                                    <div id="box" style="background-color: #cddc39;"></div>
+                                    <div id="box" style="background-color: #00bcd4;"></div>
+                                    <div id="box" style="background-color: #2196f3;"></div>
+                                    <div id="box" style="background-color: #2196f3;"></div>
+                                    <div id="box" style="background-color: #9c27b0;"></div>
+                                    <div id="box" style="background-color: #673ab7;"></div>
+                                    <div id="box" style="background-color: gold"></div>
+                                    <div id="box" style="background-color: lightseagreen"></div>
+                                    <div id="box" style="background-color: sandybrown"></div>
+                                    <div id="box" style="background-color: violet"></div>
+                                    <div id="box" style="background-color: aqua;"></div>
+                                    <div id="box" style="background-color: greenyellow;"></div>
+                                    <div id="box" style="background-color: black;"></div>
+                                    <div id="box" style="background-color: lime"></div>
+                                    <div id="box" style="background-color: silver"></div>
+                                    <div id="box" style="background-color: plum"></div>
+                                    <div id="box" style="background-color: rgb(95, 95, 247)"></div>
+                                    <div id="box" style="background-color: rgb(235, 57, 57);"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal"
+                    style="width: 50px; border-top-left-radius: 0%;border-bottom-left-radius: 0%;">
+                    <i class="fa fa-picture-o" aria-hidden="true"></i>
+                </button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Choose background color or image</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist" style="margin-bottom: 15px;">
+                                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+                                            href="#nav-home" role="tab" aria-controls="nav-home"
+                                            aria-selected="true">Сolors</a>
+                                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+                                            href="#nav-profile" role="tab" aria-controls="nav-profile"
+                                            aria-selected="false">Images</a>
+                                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+                                            href="#nav-contact" role="tab" aria-controls="nav-contact"
+                                            aria-selected="false">Files</a>
+                                    </div>
+                                </nav>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                                        aria-labelledby="nav-home-tab">
+                                        <div id="wrapper" style="padding: 13px 15px 0 15px;">
+                                            <div id="bg_color" style="background-color: #009688"></div>
+                                            <div id="bg_color" style="background-color: #607d8b;"></div>
+                                            <div id="bg_color" style="background-color: #4caf50;"></div>
+                                            <div id="bg_color" style="background-color: #cddc39;"></div>
+                                            <div id="bg_color" style="background-color: #00bcd4;"></div>
+                                            <div id="bg_color" style="background-color: #2196f3;"></div>
+                                            <div id="bg_color" style="background-color: #2196f3;"></div>
+                                            <div id="bg_color" style="background-color: #9c27b0;"></div>
+                                            <div id="bg_color" style="background-color: #673ab7;"></div>
+                                            <div id="bg_color" style="background-color: gold"></div>
+                                            <div id="bg_color" style="background-color: lightseagreen"></div>
+                                            <div id="bg_color" style="background-color: sandybrown"></div>
+                                            <div id="bg_color" style="background-color: violet"></div>
+                                            <div id="bg_color" style="background-color: aqua;"></div>
+                                            <div id="bg_color" style="background-color: greenyellow;"></div>
+                                            <div id="bg_color" style="background-color: black;"></div>
+                                            <div id="bg_color" style="background-color: lime"></div>
+                                            <div id="bg_color" style="background-color: silver"></div>
+                                            <div id="bg_color" style="background-color: plum"></div>
+                                            <div id="bg_color" style="background-color: rgb(95, 95, 247)"></div>
+                                            <div id="bg_color" style="background-color: rgb(235, 57, 57);"></div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                        aria-labelledby="nav-profile-tab">
+                                        <div id="wrapper">
+                                            <div id="img"
+                                                style="background-image: url(styles/img/EPBIdbXgRQU.jpg); background-size: cover">
+                                            </div>
+                                            <div id="img"
+                                                style="background-image: url(styles/img/zjBk80WL2ME.jpg); background-size: cover">
+                                            </div>
+                                            <div id="img"
+                                                style="background-image: url(styles/img/FpB9ZkRHlZo.jpg); background-size: cover">
+                                            </div>
+                                            <div id="img"
+                                                style="background-image: url(styles/img/jnbS-oSnH_M.jpg); background-size: cover">
+                                            </div>
+                                            <div id="img"
+                                                style="background-image: url(styles/img/KM-SUrCcNOc.jpg); background-size: cover">
+                                            </div>
+                                            <div id="img"
+                                                style="background-image: url(styles/img/p3JL9YVjR80.jpg); background-size: cover">
+                                            </div>
+                                            <div id="img"
+                                                style="background-image: url(styles/img/o1-iuk9KHVg.jpg); background-size: cover">
+                                            </div>
+                                            <div id="img"
+                                                style="background-image: url(styles/img/XKJSeEJXzN0.jpg); background-size: cover">
+                                            </div>
+                                            <div id="img"
+                                                style="background-image: url(styles/img/eY5b9qlEOow.jpg); background-size: cover">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-contact" role="tabpanel"
+                                        aria-labelledby="nav-contact-tab">
+                                        <div class="input-group mb-3" style="padding: 10px 15px;">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="inputGroupFile02">
+                                                <label class="custom-file-label" for="inputGroupFile02"
+                                                    aria-describedby="inputGroupFileAddon02">Choose file...</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box5">
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#staticBackdrop"
+                    style="width: 50px;">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                </button>
+                <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel" style="margin: 0 auto;">Sign In</h5>
+                            </div>
+                            <div class="modal-body">
+                                <form style="margin: 47px 19px 0 19px">
+                                    <div class="col-md-4 mb-3">
+                                        <input type="text" class="form-control" id="login" placeholder="Login here.."
+                                            required style="width: 430px; margin: -18px auto 20px auto;">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <input type="text" class="form-control" id="password"
+                                            placeholder="Password here.." required style="width: 430px; ">
+                                        <div class="invalid-feedback" style="width: 210px;">
+                                            Value is empty
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer" style="border-top: none;">
+                                <button type="button" class="btn btn-secondary"
+                                    style="width: 430px; margin: 0 auto; margin-bottom: 10px;" id="signIn">Sign
+                                    in</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu2" id="menu2">
+            <button id="save" class="btn btn-secondary"><i class="fa fa-floppy-o" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-example-modal-lg"
+                style="border-radius: 0%;"><i class="fa fa-table" aria-hidden="true"></i>
+            </button>
+            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel" style="padding-left: 10px;">Create Table</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form>
+                            <div class="form-row" style="text-align: start;">
+                                <div class="col-md-6 mb-3">
+                                    <label for="validationServer03">Count TR:</label>
+                                    <input type="text" class="form-control tt1" id="validationServer03"
+                                        placeholder="Type here.." required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="validationServer03">Count TD:</label>
+                                    <input type="text" class="form-control tt2" id="validationServer03"
+                                        placeholder="Type here.." required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="validationServer03">Width of TD:</label>
+                                    <input type="text" class="form-control tt3" id="validationServer03"
+                                        placeholder="Type here.." required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="validationServer03">Height of TD:</label>
+                                    <input type="text" class="form-control tt4" id="validationServer03"
+                                        placeholder="Type here.." required>
+                                </div>
+                            </div>
+                            <div class="form-row" style="width: 100%; text-align: start;">
+                                <div class="col-md-6 mb-3">
+                                    <label for="validationServer03">Width of border:</label>
+                                    <input type="text" class="form-control tt5" id="validationServer03"
+                                        placeholder="Type here.." required>
+                                    <div class="invalid-feedback">
+                                        invalid value
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="inputState">Style of border:</label>
+                                    <select id="inputState" class="form-control borderType">
+                                        <option selected disabled>choose style</option>
+                                        <option value="solid">solid</option>
+                                        <option value="double">double</option>
+                                        <option value="groove">groove</option>
+                                        <option value="dotted">dotted</option>
+                                        <option value="dashed">dashed</option>
+                                        <option value="inset">inset</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="inputState">Color of border:</label>
+                                    <select id="inputState" class="form-control borderColor">
+                                        <option selected disabled>choose color</option>
+                                        <option value="black">black</option>
+                                        <option value="pink">pink</option>
+                                        <option value="red">red</option>
+                                        <option value="blue">blue</option>
+                                        <option value="yellow">yellow</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="reset" class="btn btn-primary" value="Reset" id="reset">
+                                <button type="button" class="btn btn-primary" id="createTable">Create table</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalScrollable"
+                style="border-radius: 0%;">
+                <i class="fa fa-list-ol" aria-hidden="true"></i>
+            </button>
+            <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalScrollableTitle" style="padding-left: 10px;">Create
+                                Ol</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="col-md-4 mb-3" style="text-align: start;">
+                                    <label for="coutLi">Count li item:</label>
+                                    <input type="text" class="form-control coutLi" id="coutLi" placeholder="Type here.."
+                                        required style="width: 447px;">
+                                </div>
+                                <div class="col-md-6 mb-3" style="text-align: start;">
+                                    <label for="inputState">Type mark of list:</label>
+                                    <select id="inputState" class="form-control typeMark" placeholder="choose ol..."
+                                        style="width: 447px;">
+                                        <option selected disabled>choose Ol type mark</option>
+                                        <option value="decimal">1</option>
+                                        <option value="upper-roman">I</option>
+                                        <option value="lower-roman">i</option>
+                                        <option value="upper-alpha">A</option>
+                                        <option value="lower-alpha">a</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Value is empty
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="reset" class="btn btn-primary" id="reset1" value="Reset">
+                                    <button type="button" class="btn btn-primary" id="createList">Create List</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-secondary" id="ul" data-toggle="modal"
+                data-target="#exampleModalScrollable2">
+                <i class="fa fa-list-ul" aria-hidden="true"></i>
+            </button>
+            <div class="modal fade" id="exampleModalScrollable2" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalScrollableTitle2" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalScrollableTitle2"
+                                style="padding-left: 10px; text-align: start;">Create
+                                Ul</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="col-md-4 mb-3" style="text-align: start;">
+                                    <label for="coutLi2">Count li item:</label>
+                                    <input type="text" class="form-control coutLi2" id="coutLi2"
+                                        placeholder="Type here.." required style="width: 447px;">
+                                </div>
+                                <div class="col-md-6 mb-3" style="text-align: start;">
+                                    <label for="inputState">Type mark of list:</label>
+                                    <select id="inputState" class="form-control typeMark2" placeholder="choose ol..."
+                                        style="width: 447px;">
+                                        <option selected disabled>choose Ul type mark</option>
+                                        <option value="circle">circle</option>
+                                        <option value="disc">disc</option>
+                                        <option value="square">square</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Value is empty
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="reset" class="btn btn-primary" id="reset2" value="Reset">
+                                    <button type="button" class="btn btn-primary" id="createList2">Create List</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="container">
+            <div id="area">
+                <textarea name="area" id="textarea" cols="60"></textarea>
+            </div>
+            <div id="some_text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto molestias fuga qui itaque!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto molestias fuga qui itaque!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto molestias fuga qui itaque!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto molestias fuga qui itaque!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto molestias fuga qui itaque!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto molestias fuga qui itaque!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto molestias fuga qui itaque!</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
